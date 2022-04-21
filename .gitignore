@@ -1,6 +1,8 @@
 #manual add
 .project
 .classpath
+test-output/
+drivers/
 
 
 /bin/
