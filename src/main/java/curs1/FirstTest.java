@@ -13,7 +13,7 @@ public class FirstTest {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://keybooks.ro/");
 		
-		
+		driver.quit();
 	}
 
 }
