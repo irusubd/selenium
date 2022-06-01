@@ -22,7 +22,6 @@ public class BaseTest {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
-		//driver.get("https://the-internet.herokuapp.com/login");
 		driver.get("https://keybooks.ro/");
 		jseExecutor =  (JavascriptExecutor)driver;
 		navMenu =  new NavMenuPage(driver);

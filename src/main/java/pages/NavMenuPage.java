@@ -14,6 +14,7 @@ public class NavMenuPage {
 	
 	public By loginLink = By.linkText("Login");
 	public By homeLink = By.linkText("HOME");
+	public By singleAuthorLink = By.linkText("SINGLE AUTHOR");
 	
 	public By loggedUsername = By.cssSelector("span[class='user_name']");
 	
@@ -25,17 +26,23 @@ public class NavMenuPage {
 	public void navigateToHome() {
 		driver.findElement(homeLink).click();
 	}
-	//metoda 2
-	public void navigateTo(By locator) {
-		driver.findElement(locator).click();
-	}
 	
-	//metoda 3
-	public LoginPage navToLogin() {
-		driver.findElement(loginLink).click();
-		return new LoginPage(driver);
+	public void navigateToSingleAuthor() {
+		driver.findElement(singleAuthorLink).click();
 	}
+
 	
+//	//metoda 2
+//	public void navigateTo(By locator) {
+//		driver.findElement(locator).click();
+//	}
+//	
+//	//metoda 3
+//	public LoginPage navToLogin() {
+//		driver.findElement(loginLink).click();
+//		return new LoginPage(driver);
+//	}
+//	
 	
 	public String getLoggedUser() {
 		
