@@ -14,13 +14,8 @@ public class ShippingAddressTest extends BaseTest{
 	@Test
 	public void loginTest() {
 		
-		NavMenuPage navMenu = new NavMenuPage(driver);
-		navMenu.navigateToLogin();
-		
-		LoginPage loginPage = new LoginPage(driver);
-		loginPage.setUsername("TestUser");
-		loginPage.setPassword("12345@67890");
-		loginPage.clickSubmit();
+		LoginPage loginPage = navMenu.navigateToLogin();
+		loginPage.loginInApp("TestUser", "12345@67890");
 		assertEquals(navMenu.getLoggedUser(), "Test User");
 		
 		ShippingAddressPage shipAddr = new ShippingAddressPage(driver);

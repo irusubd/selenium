@@ -20,8 +20,9 @@ public class NavMenuPage {
 	public By loggedUsername = By.cssSelector("span[class='user_name']");
 
 	// metoda 1
-	public void navigateToLogin() {
+	public LoginPage navigateToLogin() {
 		driver.findElement(loginLink).click();
+		return new LoginPage(driver);
 	}
 
 	public void navigateToHome() {

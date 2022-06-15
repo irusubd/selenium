@@ -9,21 +9,21 @@ import utils.BaseTest;
 
 public class DropdownTest extends BaseTest{
 	
-	@Test
+	@Test(groups = "ProductFunctionality")
 	public void dropdownFilterByValueExample() {
 		ShopPage shopPage = navMenu.navToShop();
 		shopPage.filterByValue("popularity");
 		assertEquals(shopPage.getCurrentSelectedOption(), "Sort by popularity");
 	}
 	
-	@Test
+	@Test(groups = "ProductFunctionality")
 	public void dropdownFilterByIndexExample() {
 		ShopPage shopPage = navMenu.navToShop();
 		shopPage.filterByIndex(3);
 		assertEquals(shopPage.getCurrentSelectedOption(), "Sort by latest");
 	}
 	
-	@Test
+	@Test(groups = "ProductFunctionality")
 	public void dropdownFilterByVisibleTextExample() {
 		ShopPage shopPage = navMenu.navToShop();
 		shopPage.filterByVisibleText("Sort by price: high to low");
